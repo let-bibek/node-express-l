@@ -1,0 +1,22 @@
+{
+  "name": "express-l",
+  "version": "1.0.0",
+  "description": "node, express and mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/let-bibek/node-express-l.git"
+  },
+  "author": "Bibek Shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/let-bibek/node-express-l/issues"
+  },
+  "homepage": "https://github.com/let-bibek/node-express-l#readme",
+  "dependencies": {
+    "color": "^4.2.3"
+  }
+}
