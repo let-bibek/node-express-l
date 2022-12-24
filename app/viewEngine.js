@@ -40,4 +40,8 @@ app.get('/profile',(req,res)=>{
     res.render('profile',{menu});
 
 })
+
+app.get('/login',(req,res)=>{
+    res.render('login')
+})
 app.listen(8200);
