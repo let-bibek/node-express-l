@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile page</title>
-</head>
-<body>
-    <center><h1>Profile page</h1></center>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alfa's Menu</title>
+  </head>
+  <body>
+    <center><h1>Welcome to Alfa's Restaurant</h1></center>
+    <div>
+      <% menu.forEach((men)=>{%>
+      <ul>
+        <li><strong>Title : </strong><%=men.title%></li>
+        <p><strong>Category : </strong><%=men.category%></p>
+        <p><strong>Price : $</strong><%=men.price%></p>
+        <p><strong>Description : </strong><%=men.desc%></p>
+      </ul>
+      <%}) %>
+    </div>
+  </body>
 </html>
