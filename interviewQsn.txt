@@ -1,0 +1,5 @@
+Qn1. How node js works?
+--> Call Stack-->Node api-->Callback queue-->(Event loop)
+
+Qn2.
+-->
