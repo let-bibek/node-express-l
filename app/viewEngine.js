@@ -6,6 +6,9 @@ app.set('view engine','ejs');
 app.get('',(req,res)=>{
     res.sendFile(`${fileDir}/index.html`);
 })
+app.get("/home", (req, res) => {
+  res.sendFile(`${fileDir}/index.html`);
+});
 app.get('/about',(req,res)=>{
     res.sendFile(`${fileDir}/about.html`)
 })
