@@ -12,4 +12,7 @@ app.get('/index',(req,res)=>{
 app.get('',(req,res)=>{
     res.sendFile(`${pathDir}/index.html`);
 })
+app.get("*", (req, res) => {
+  res.sendFile(`${pathDir}/404Page.html`);
+});
 app.listen(8200);
