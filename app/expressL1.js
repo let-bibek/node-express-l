@@ -6,8 +6,9 @@ app.get('',(req,res)=>{
 });
 
 app.get('/demo',(req,resp)=>{
-    resp.send(`<input type="text" name="username" placeholder="Username"/>
+    resp.send(`<input type="text" name="username" placeholder="Username" value='${req.query.data}'/>
     <button>Send</button>
+    <a href="/help">Need help?</a>
     `)
    
 })
