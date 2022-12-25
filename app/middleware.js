@@ -20,6 +20,6 @@ app.get('',(req,res)=>{
     res.sendFile(`${fileDir}/index.html`)
 })
 app.get('/profile',(req,res)=>{
-    res.render('login')
+    res.render('login')         
 })
 app.listen(8200)
