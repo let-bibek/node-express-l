@@ -12,6 +12,7 @@ app.get('/index',(req,res)=>{
 app.get('',(req,res)=>{
     res.sendFile(`${pathDir}/index.html`);
 })
+// 404 page
 app.get("*", (req, res) => {
   res.sendFile(`${pathDir}/404Page.html`);
 });
