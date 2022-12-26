@@ -1,5 +1,19 @@
 Qn1. How node js works?
 --> Call Stack-->Node api-->Callback queue-->(Event loop)
 
-Qn2.
--->
+Qn2.What is the main difference between MySQL and MongoDb
+-->MySQL stores data in the form of table while MongoDb store data in the form of collection
+   i.e. objects.
+
+Qn3.MongoDb commands:
+-->Show database: show dbs
+
+-->Create database: use database_name
+
+-->Create collection: db.createCollection('collection_name')
+
+-->Delete collection: db.collection_name.drop()
+
+-->Delete database: db.dropDatabase()
+
+-->Show collections: show collections
