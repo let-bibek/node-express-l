@@ -17,3 +17,11 @@ Qn3.MongoDb commands:
 -->Delete database: db.dropDatabase()
 
 -->Show collections: show collections
+
+-->Insert One item to the database: db.collection_name.insertOne({name:'realme 9',category:'smartphone'})
+
+--> See the collections of the collection: db.collection_name.find()
+
+--> Update one collection: db.collection_name.updateOne({name:'apple'},{$set:{price:24800}})
+
+--> Delete one collection: db.collection_name.deleteOne({brand:'apple'})
