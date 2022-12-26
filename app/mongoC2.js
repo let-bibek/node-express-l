@@ -1,16 +1,17 @@
-const { MongoClient } = require("mongodb");
-const url = "mongodb://127.0.0.1:27017";
-const client = new MongoClient(url);
-const database = "eCom";
+const dbConnect = require("./mongoDbConnect");
 
-async function getData() {
-  let connect = await client.connect();
-  let db = connect.db(database);
-   return db.collection("product");
-//   let response = await db_collection.find({ category: "smartphone" }).toArray();
-//   console.log(response);
-}
+console.log("Old promise method----------------->");
+// dbConnect().then((res) => {
+//   res
+//     .find()
+//     .toArray()
+//     .then((data) => console.log(data));
+// });
 
-getData().then((res)=>{
-    res.find().toArray().then((data)=>console.log(data))
-})
+console.log("Modern async method");
+
+const main = async () => {
+  const data = await dbConnect();
+   data = await data.find({}).toArray();
+  console.warn(data);
+};
