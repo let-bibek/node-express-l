@@ -1,12 +1,12 @@
 const dbConnect = require("./mongoDbConnect");
 
 console.log("Old promise method----------------->");
-// dbConnect().then((res) => {
-//   res
-//     .find()
-//     .toArray()
-//     .then((data) => console.log(data));
-// });
+dbConnect().then((res) => {
+  res
+    .find()
+    .toArray()
+    .then((data) => console.log(data));
+});
 
 console.log("Modern async method");
 
