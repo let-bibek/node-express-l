@@ -7,7 +7,7 @@ dbConnect().then((res) => {
     .toArray()
     .then((data) => console.log(data));
 });
-
+console.log('--------------------------------------------------------------------->');
 console.log("Modern async method");
 
 const main = async () => {
@@ -15,3 +15,5 @@ const main = async () => {
    data = await data.find({}).toArray();
   console.warn(data);
 };
+
+main();
