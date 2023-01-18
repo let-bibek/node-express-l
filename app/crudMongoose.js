@@ -12,9 +12,9 @@ const insertDb = async () => {
   await mongoose.connect(conStr);
   const tourModel = mongoose.model("places", dbSchema);
   const data = new tourModel({
-    name: "Halesi Mahadev",
-    location: "Khotang",
-    description: "It's a 2 days trip by bus.",
+    name: "Chamere Gufa",
+    location: "Dhading",
+    description: "It's a 20 min trip by jeep.",
     price: 2000,
   });
   const query = await data.save();
