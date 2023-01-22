@@ -3,6 +3,7 @@ require("./api/mongooseConfig");
 const Place = require("./schema/place");
 const app = express();
 app.use(express.json());
+
 app.get("/search/:key", async (req, res) => {
   const data = await Place.find({ "$or": [
     { "name": { $regex: req.params.key } },
