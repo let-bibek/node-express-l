@@ -38,7 +38,7 @@ app.post("/post", (req, res) => {
 app.post("/save", (req, res) => {
   const query = req.body;
   con.query("insert into users set?", query, (e, results, fields) => {
-    if (e) e;
+    if (e) throw e;
     res.send(results);
   });
 });
@@ -46,15 +46,26 @@ app.post("/save", (req, res) => {
 // update
 
 app.put("/update/:id", (req, res) => {
-  const query = [req.body.username,req.body.email,req.body.phone];
+  const query = [req.body.username, req.body.email, req.body.phone];
 
   con.query(
     `update users set username=?,email=?,phonenbr=? where personId=${req.params.id}`,
     query,
     (e, results, fields) => {
-      if (e) e;
+      if (e) throw e;
       res.send(results);
     }
   );
+});
+
+// delete api
+
+app.delete("/delete/:id", (req, res) => {
+  const query = `delete from users where personId=${req.params.id}`;
+
+  con.query(query, (e, results, fields) => {
+    if (e) throw e;
+    res.send(results);
+  });
 });
 app.listen(8200);
